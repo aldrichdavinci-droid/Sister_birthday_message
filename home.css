@@ -1,0 +1,270 @@
+/* =================================
+   BASIC RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =================================
+   BODY
+================================= */
+
+body {
+    min-height: 100vh;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    background: linear-gradient(
+        135deg,
+        #ffb6d5,
+        #b9d9ff
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 30px;
+    color: #4b3040;
+}
+
+
+/* =================================
+   CARDS CONTAINER
+================================= */
+
+.cards-container {
+
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /*
+       This puts the two cards
+       beside each other.
+    */
+    gap: 60px;
+    /*
+       Allows the cards to move
+       to another line if necessary.
+    */
+    flex-wrap: nowrap;
+}
+
+
+/* =================================
+   BIRTHDAY CARD
+================================= */
+
+.birthday-card {
+
+    width: 430px;
+    min-height: 500px;
+    background: rgba(30, 184, 239, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 30px;
+    padding: 30px 35px;
+    text-align: center;
+    box-shadow:
+        0 15px 40px rgba(235, 5, 82, 0.18);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* =================================
+   CARD HOVER
+================================= */
+
+.birthday-card:hover {
+
+    transform: translateY(-8px);
+    box-shadow:
+        0 20px 50px rgba(180, 90, 120, 0.25);
+}
+
+
+/* =================================
+   BIRTHDAY IMAGE
+================================= */
+
+.birthday-image {
+
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 30px;
+    border: 7px solid rgb(250, 6, 193);
+    box-shadow:
+        0 8px 25px rgba(150, 70, 100, 0.25);
+}
+
+
+/* =================================
+   HEADING
+================================= */
+
+.birthday-card h1 {
+    font-size: 34px;
+    color: #d95c88;
+    margin-bottom: 10px;
+}
+
+
+/* =================================
+   HEARTS
+================================= */
+
+.hearts {
+    font-size: 25px;
+    color: #e66b96;
+    margin-bottom: 30px;
+    letter-spacing: 7px;
+}
+
+
+/* =================================
+   MESSAGE
+================================= */
+
+.message {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #634653;
+    margin-bottom: 25px;
+}
+
+
+.message p {
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   BOTTOM HEART
+================================= */
+
+.bottom-heart {
+    font-size: 25px;
+    color: #d95c88;
+}
+
+/* =================================
+   SECOND CARD
+================================= */
+
+
+/* =================================
+   TABLET / MOBILE
+================================= */
+
+@media (max-width: 750px) {
+
+    body {
+
+        padding: 40px 20px;
+
+        align-items: flex-start;
+    }
+
+
+    .cards-container {
+
+        /*
+           On smaller screens,
+           cards become vertical.
+        */
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 45px;
+    }
+
+
+    .birthday-card {
+
+        width: min(100%, 380px);
+        min-height: auto;
+    }
+
+
+    .birthday-card:nth-child(2) {
+
+        margin-top: 0;
+    }
+}
+
+
+/* =================================
+   SMALL PHONES
+================================= */
+
+@media (max-width: 400px) {
+
+    body {
+
+        padding: 30px 15px;
+    }
+
+
+    .birthday-card {
+
+        width: 100%;
+
+        padding: 25px 20px;
+    }
+
+
+    .birthday-image {
+
+        width: 200px;
+
+        height: 200px;
+    }
+
+
+    .birthday-card h1 {
+
+        font-size: 24px;
+    }
+
+
+    .message {
+
+        font-size: 14px;
+    }
+}
+.memories-button {
+    margin-top: 40px;
+    padding: 12px 28px;
+    background-color: #e66b96;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 8px 20px rgba(180, 90, 120, 0.25);
+    transition: 0.3s ease;
+}
+.memories-button:hover {
+    transform: translateY(-3px);
+    background-color: #c94b78;
+    box-shadow: 0 12px 25px rgba(180, 90, 120, 0.35);
+}
+.birthday-page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
